@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, i nitial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- GG Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icon -->
+    <link
+      rel="shortcut icon"
+      href="./images/Tea House.png"
+      type="image/x-icon"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/style/dashboard.css" />
+    <!-- Chart -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>TeaHouse Admin</title>
+  </head>
+  <body>
+    <input type="checkbox" id="nav-toggle" />
+    <!-- lèt -->
+    <div class="sidebar">
+      <div class="sidebar-brand">
+        <img src="./images/Tea House.png" style="width: 200px; height: 200px" />
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li>
+            <a href="./dashboard.html" class="active"
+              ><i class="fa-solid fa-table-columns"></i
+              ><span>Dashboard </span></a
+            >
+          </li>
+          <li>
+            <a href="./products.html"
+              ><i class="fa-solid fa-mug-hot"></i><span>Sản phẩm</span></a
+            >
+          </li>
+          <li>
+            <a href="./invoice.html"
+              ><i class="fa-solid fa-cart-shopping"></i><span>Đơn hàng</span></a
+            >
+          </li>
+          <li>
+            <a href="./user.html"
+              ><i class="fa-solid fa-users"></i><span>Người dùng</span></a
+            >
+          </li>
+          <li>
+            <a href="./news.html"
+              ><i class="fa-solid fa-file-lines"></i><span>Bài viết</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--right  -->
+    <div class="main-content">
+      <header>
+        <h2>
+          <label for="nav-toggle"><i class="fa-solid fa-bars"></i></label>
+        </h2>
+        <div class="search-wrapper">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" placeholder="Tìm kiếm" />
+        </div>
+        <div class="user-wrapper">
+          <img
+            src="./images/avt.png"
+            width="40px"
+            height="40px"
+            alt=""
+            srcset=""
+          />
+
+          <h4>Nhi Pham</h4>
+        </div>
+      </header>
+
+      <!-- MAIN -->
+      <main>
+        <div class="cards">
+          <div class="card-single">
+            <div>
+              <h1>54</h1>
+              <span>Khách hàng</span>
+            </div>
+            <div><i class="fa-sharp fa-solid fa-user-plus"></i></div>
+          </div>
+          <!-- Card 2 -->
+          <div class="card-single">
+            <div>
+              <h1>79</h1>
+              <span>Đơn hàng</span>
+            </div>
+            <div><i class="fa-solid fa-cart-arrow-down"></i></div>
+          </div>
+          <!-- Card 3 -->
+          <div class="card-single">
+            <div>
+              <h1>15tr</h1>
+              <span>Lợi nhuận</span>
+            </div>
+            <div><i class="fa-solid fa-sack-dollar"></i></div>
+          </div>
+        </div>
+
+        <div class="recent-gird">
+          <div class="chart">
+            <canvas
+              id="myChart"
+              style="width: 100%; max-width: 5500px; margin: 0 0 40px 10px"
+            ></canvas>
+            <h2 style="margin-left: 130px">
+              Tổng doanh thu 3 tuần đầu tháng 1
+            </h2>
+          </div>
+          <!-- KH! -->
+          <div class="customers">
+            <div class="card">
+              <div class="card-header">
+                <h3>Khách hàng mới</h3>
+                <button>Tất cả <i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+
+              <div class="card-body">
+                <!-- KH1 -->
+                <div class="customer">
+                  <div class="info">
+                    <img
+                      src="./images/avt.png"
+                      alt=""
+                      style="width: 40px; height: 40px"
+                    />
+                    <div>
+                      <h4>Nguyen Nha Thu</h4>
+                      <small>HCM</small>
+                    </div>
+                  </div>
+                  <div class="contact">
+                    <i class="fa-solid fa-phone"></i>
+                    <i class="fa-solid fa-message"></i>
+                  </div>
+                </div>
+                <!-- KH2 -->
+                <div class="customer">
+                  <div class="info">
+                    <img
+                      src="./images/avt.png"
+                      alt=""
+                      style="width: 40px; height: 40px"
+                    />
+                    <div>
+                      <h4>Pham Nhi</h4>
+                      <small>Tien Giang</small>
+                    </div>
+                  </div>
+                  <div class="contact">
+                    <i class="fa-solid fa-phone"></i>
+                    <i class="fa-solid fa-message"></i>
+                  </div>
+                </div>
+                <!-- KH3 -->
+                <div class="customer">
+                  <div class="info">
+                    <img
+                      src="./images/avt.png"
+                      alt=""
+                      style="width: 40px; height: 40px"
+                    />
+                    <div>
+                      <h4>Tran Minh Nha</h4>
+                      <small>Ha Noi</small>
+                    </div>
+                  </div>
+                  <div class="contact">
+                    <i class="fa-solid fa-phone"></i>
+                    <i class="fa-solid fa-message"></i>
+                  </div>
+                </div>
+
+                <!-- KH4 -->
+                <div class="customer">
+                  <div class="info">
+                    <img
+                      src="./images/avt.png"
+                      alt=""
+                      style="width: 40px; height: 40px"
+                    />
+                    <div>
+                      <h4>Le Phuong</h4>
+                      <small>Soc Trang</small>
+                    </div>
+                  </div>
+                  <div class="contact">
+                    <i class="fa-solid fa-phone"></i>
+                    <i class="fa-solid fa-message"></i>
+                  </div>
+                </div>
+                <!-- KH5 -->
+                <div class="customer">
+                  <div class="info">
+                    <img
+                      src="./images/avt.png"
+                      alt=""
+                      style="width: 40px; height: 40px"
+                    />
+                    <div>
+                      <h4>Thanh Tam</h4>
+                      <small>HCM</small>
+                    </div>
+                  </div>
+                  <div class="contact">
+                    <i class="fa-solid fa-phone"></i>
+                    <i class="fa-solid fa-message"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script>
+    var xValues = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+
+    new Chart("myChart", {
+      type: "line",
+      data: {
+        labels: xValues,
+        datasets: [
+          {
+            data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 7830, 2478],
+            borderColor: "red",
+            fill: false,
+          },
+          {
+            data: [1600, 1700, 1700, 1900, 2000, 2700, 4000, 5000, 6000, 7000],
+            borderColor: "green",
+            fill: false,
+          },
+          {
+            data: [300, 700, 2000, 5000, 6000, 4000, 2000, 1000, 200, 100],
+            borderColor: "blue",
+            fill: false,
+          },
+        ],
+      },
+      options: {
+        legend: { display: false },
+      },
+    });
+  </script>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, i nitial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- GG Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icon -->
+    <link
+      rel="shortcut icon"
+      href="./images/Tea House.png"
+      type="image/x-icon"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/style/invoice.css" />
+    <!-- Chart -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>TeaHouse Admin</title>
+  </head>
+  <body>
+    <input type="checkbox" id="nav-toggle" />
+    <!-- lèt -->
+    <div class="sidebar">
+      <div class="sidebar-brand">
+        <img src="./images/Tea House.png" style="width: 200px; height: 200px" />
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li>
+            <a href="./dashboard.html"
+              ><i class="fa-solid fa-table-columns"></i
+              ><span>Dashboard </span></a
+            >
+          </li>
+          <li>
+            <a href="./products.html"
+              ><i class="fa-solid fa-mug-hot"></i><span>Sản phẩm</span></a
+            >
+          </li>
+          <li>
+            <a href="./invoice.html" class="active"
+              ><i class="fa-solid fa-cart-shopping"></i><span>Đơn hàng</span></a
+            >
+          </li>
+          <li>
+            <a href="./user.html"
+              ><i class="fa-solid fa-users"></i><span>Người dùng</span></a
+            >
+          </li>
+          <li>
+            <a href="./news.html"
+              ><i class="fa-solid fa-file-lines"></i><span>Bài viết</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--right  -->
+    <div class="main-content">
+      <header>
+        <h2>
+          <label for="nav-toggle"><i class="fa-solid fa-bars"></i></label>
+        </h2>
+        <div class="search-wrapper">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" placeholder="Tìm kiếm" />
+        </div>
+        <div class="user-wrapper">
+          <img
+            src="./images/avt.png"
+            width="40px"
+            height="40px"
+            alt=""
+            srcset=""
+          />
+
+          <h4>Nhi Pham</h4>
+        </div>
+      </header>
+
+      <!-- MAIN -->
+      <main>
+        <div class="cards">
+          <div class="card-single">
+            <div>
+              <h1>102</h1>
+              <span>Đã giao</span>
+            </div>
+            <div><i class="fa-solid fa-check"></i></div>
+          </div>
+          <!-- Card 2 -->
+          <div class="card-single">
+            <div>
+              <h1>79</h1>
+              <span>Đang giao</span>
+            </div>
+            <div><i class="fa-solid fa-truck-fast"></i></div>
+          </div>
+          <!-- Card 3 -->
+          <div class="card-single">
+            <div>
+              <h1>45</h1>
+              <span>Đang xử lí</span>
+            </div>
+            <div><i class="fa-solid fa-clock"></i></div>
+          </div>
+          <!-- Card 4 -->
+          <div class="card-single">
+            <div>
+              <h1>37</h1>
+              <span>Yêu cầu mới</span>
+            </div>
+            <div><i class="fa-solid fa-file-circle-plus"></i></div>
+          </div>
+        </div>
+
+        <div class="recent-gird">
+          <div class="projects">
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h2>Đơn hàng tháng 12 /2022</h2>
+                  <p style="padding: 12px 0">Hiển thị 4 trên 15 dòng</p>
+                </div>
+                <button>Tất cả <i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+              <div class="card-body">
+                <table>
+                  <thead>
+                    <tr>
+                      <td>Mã ĐH</td>
+                      <td>Tên khách hàng</td>
+                      <td>Địa chỉ</td>
+                      <td>Thời gian đặt hàng</td>
+                      <td>Trạng thái</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>DH01</td>
+                      <td>Nguyễn Thúc Thùy Tiên</td>
+                      <td>221A, Quận 7, HCM</td>
+                      <td>20:35 12/01/2022</td>
+                      <td>
+                        <select name="" id="">
+                          <option value="Đang giao">Đang giao</option>
+                          <option value="Chờ xác nhận">Chờ xác nhận</option>
+                          <option value="Đã giao">Đã giao</option>
+                          <option value="Đã hủy">Đã hủy</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <!-- -------------------------------------- -->
+                    <tr>
+                      <td>DH02</td>
+                      <td>Trần Tiểu Vy</td>
+                      <td>19 đường số 8, HD2, Thủ Đức</td>
+                      <td>21:40 01/01/2022</td>
+                      <td>
+                        <select name="" id="">
+                          <option value="Đang giao">Chờ xác nhận</option>
+                          <option value="Chờ xác nhận">Đang giao</option>
+                          <option value="Đã giao">Đã giao</option>
+                          <option value="Đã hủy">Đã hủy</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <!-- -------------------------------------- -->
+                    <tr>
+                      <td>DH03</td>
+                      <td>Đỗ Thị Hà</td>
+                      <td>12 Trần Phú, Quận 9, HCM</td>
+                      <td>08:20 25/12/2022</td>
+                      <td>
+                        <select name="" id="">
+                          <option value="Đang giao">Đã giao</option>
+                          <option value="Chờ xác nhận">Chờ xác nhận</option>
+                          <option value="Đã giao">Đang giao</option>
+                          <option value="Đã hủy">Đã hủy</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <!-- -------------------------------------- -->
+                    <tr>
+                      <td>DH04</td>
+                      <td>Lương Thùy Linh</td>
+                      <td>204BB, Quận 1, HCM</td>
+                      <td>17:35 21/12/2022</td>
+                      <td>
+                        <select name="" id="">
+                          <option value="Đang giao">Đã hủy</option>
+                          <option value="Chờ xác nhận">Chờ xác nhận</option>
+                          <option value="Đã giao">Đã giao</option>
+                          <option value="Đã hủy">Đang giao</option>
+                        </select>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script>
+    var xValues = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+
+    new Chart("myChart", {
+      type: "line",
+      data: {
+        labels: xValues,
+        datasets: [
+          {
+            data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 7830, 2478],
+            borderColor: "red",
+            fill: false,
+          },
+          {
+            data: [1600, 1700, 1700, 1900, 2000, 2700, 4000, 5000, 6000, 7000],
+            borderColor: "green",
+            fill: false,
+          },
+          {
+            data: [300, 700, 2000, 5000, 6000, 4000, 2000, 1000, 200, 100],
+            borderColor: "blue",
+            fill: false,
+          },
+        ],
+      },
+      options: {
+        legend: { display: false },
+      },
+    });
+  </script>
+</html>

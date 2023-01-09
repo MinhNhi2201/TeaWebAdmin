@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, i nitial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- GG Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icon -->
+    <link
+      rel="shortcut icon"
+      href="./images/Tea House.png"
+      type="image/x-icon"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/style/product.css" />
+    <!-- Chart -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>TeaHouse Admin</title>
+  </head>
+  <body>
+    <input type="checkbox" id="nav-toggle" />
+    <!-- lèt -->
+    <div class="sidebar">
+      <div class="sidebar-brand">
+        <img src="./images/Tea House.png" style="width: 200px; height: 200px" />
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li>
+            <a href="./dashboard.html"
+              ><i class="fa-solid fa-table-columns"></i
+              ><span>Dashboard </span></a
+            >
+          </li>
+          <li>
+            <a href="./products.html" class="active"
+              ><i class="fa-solid fa-mug-hot"></i><span>Sản phẩm</span></a
+            >
+          </li>
+          <li>
+            <a href="/invoice.html"
+              ><i class="fa-solid fa-cart-shopping"></i><span>Đơn hàng</span></a
+            >
+          </li>
+          <li>
+            <a href="./user.html"
+              ><i class="fa-solid fa-users"></i><span>Người dùng</span></a
+            >
+          </li>
+          <li>
+            <a href="./news.html"
+              ><i class="fa-solid fa-file-lines"></i><span>Bài viết</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--right  -->
+    <div class="main-content">
+      <header>
+        <h2>
+          <label for="nav-toggle"><i class="fa-solid fa-bars"></i></label>
+        </h2>
+        <div class="search-wrapper">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" placeholder="Tìm kiếm" />
+        </div>
+        <div class="user-wrapper">
+          <img
+            src="./images/avt.png"
+            width="40px"
+            height="40px"
+            alt=""
+            srcset=""
+          />
+
+          <h4>Nhi Pham</h4>
+        </div>
+      </header>
+
+      <!-- MAIN -->
+      <main>
+        <div class="cards">
+          <div class="card-single">
+            <div>
+              <h1>102</h1>
+              <span>Đã giao</span>
+            </div>
+            <div><i class="fa-solid fa-check"></i></div>
+          </div>
+          <!-- Card 2 -->
+          <div class="card-single">
+            <div>
+              <h1>79</h1>
+              <span>Đang giao</span>
+            </div>
+            <div><i class="fa-solid fa-truck-fast"></i></div>
+          </div>
+          <!-- Card 3 -->
+          <div class="card-single">
+            <div>
+              <h1>45</h1>
+              <span>Đang xử lí</span>
+            </div>
+            <div><i class="fa-solid fa-clock"></i></div>
+          </div>
+          <!-- Card 4 -->
+          <div class="card-single">
+            <div>
+              <h1>37</h1>
+              <span>Yêu cầu mới</span>
+            </div>
+            <div><i class="fa-solid fa-file-circle-plus"></i></div>
+          </div>
+        </div>
+
+        <div class="recent-gird">
+          <div class="projects">
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h2>Quản lí thức uống</h2>
+                  <button style="margin: 12px 0">Thêm</button>
+                </div>
+                <div>
+                  <p style="padding: 12px 0">Hiển thị 4 trên 10 dòng</p>
+                  <button style="text-align: end">
+                    Tất cả <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <table>
+                  <thead>
+                    <tr>
+                      <td>Mã TU</td>
+                      <td>Tên thức uống</td>
+                      <td>Hình ảnh</td>
+                      <td>Danh mục</td>
+                      <td>Giá</td>
+                      <td>Số lượng</td>
+                      <td class="td">Tùy chỉnh</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>TU01</td>
+                      <td style="width: 20%; height: 20%; text-align: center">
+                        <img
+                          src="./images/trachanhmatong.png"
+                          style="width: 20%"
+                          alt=""
+                          srcset=""
+                        />
+                      </td>
+                      <td>Trà chanh mật ong</td>
+
+                      <td>Trà</td>
+                      <td>35.000đ</td>
+                      <td>21</td>
+                      <td class="td">
+                        <i class="fa-solid fa-pen pen"></i>
+                        <i class="fa-solid fa-trash-can move"></i>
+                      </td>
+                    </tr>
+                    <!-- -------------------------------------- -->
+
+                    <tr>
+                      <td>TU02</td>
+                      <td style="width: 20%; height: 20%; text-align: center">
+                        <img
+                          src="./images/tradau.png"
+                          style="width: 20%"
+                          alt=""
+                          srcset=""
+                        />
+                      </td>
+                      <td>Trà dâu tây</td>
+
+                      <td>Trà</td>
+                      <td>35.000đ</td>
+                      <td>19</td>
+                      <td class="td">
+                        <i class="fa-solid fa-pen pen"></i>
+                        <i class="fa-solid fa-trash-can move"></i>
+                      </td>
+                    </tr>
+                    <!-- -------------------------------------- -->
+                    <tr>
+                      <td>TU03</td>
+                      <td style="width: 20%; height: 20%; text-align: center">
+                        <img
+                          src="./images/cafe1.png"
+                          style="width: 20%"
+                          alt=""
+                          srcset=""
+                        />
+                      </td>
+                      <td>Cà Phê Latte</td>
+
+                      <td>Cafe</td>
+                      <td>20.000đ</td>
+                      <td>10</td>
+                      <td class="td">
+                        <i class="fa-solid fa-pen pen"></i>
+                        <i class="fa-solid fa-trash-can move"></i>
+                      </td>
+                    </tr>
+                    <!-- -------------------------------------- -->
+                    <tr>
+                      <td>TU04</td>
+                      <td style="width: 20%; height: 20%; text-align: center">
+                        <img
+                          src="./images/sirobacha.png"
+                          style="width: 20%"
+                          alt=""
+                          srcset=""
+                        />
+                      </td>
+                      <td>Soda Bạc Hà</td>
+
+                      <td>Soda</td>
+                      <td>27.000đ</td>
+                      <td>7</td>
+                      <td class="td">
+                        <i class="fa-solid fa-pen pen"></i>
+                        <i class="fa-solid fa-trash-can move"></i>
+                      </td>
+                    </tr>
+                    <!-- -------------------------------------- -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script>
+    var xValues = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+
+    new Chart("myChart", {
+      type: "line",
+      data: {
+        labels: xValues,
+        datasets: [
+          {
+            data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 7830, 2478],
+            borderColor: "red",
+            fill: false,
+          },
+          {
+            data: [1600, 1700, 1700, 1900, 2000, 2700, 4000, 5000, 6000, 7000],
+            borderColor: "green",
+            fill: false,
+          },
+          {
+            data: [300, 700, 2000, 5000, 6000, 4000, 2000, 1000, 200, 100],
+            borderColor: "blue",
+            fill: false,
+          },
+        ],
+      },
+      options: {
+        legend: { display: false },
+      },
+    });
+  </script>
+</html>

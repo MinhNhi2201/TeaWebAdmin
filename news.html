@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, i nitial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- GG Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icon -->
+    <link
+      rel="shortcut icon"
+      href="./images/Tea House.png"
+      type="image/x-icon"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/style/news.css" />
+    <!-- Chart -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>TeaHouse Admin</title>
+  </head>
+  <body>
+    <input type="checkbox" id="nav-toggle" />
+    <!-- lèt -->
+    <div class="sidebar">
+      <div class="sidebar-brand">
+        <img src="./images/Tea House.png" style="width: 200px; height: 200px" />
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li>
+            <a href="./dashboard.html"
+              ><i class="fa-solid fa-table-columns"></i
+              ><span>Dashboard </span></a
+            >
+          </li>
+          <li>
+            <a href="./products.html"
+              ><i class="fa-solid fa-mug-hot"></i><span>Sản phẩm</span></a
+            >
+          </li>
+          <li>
+            <a href="/invoice.html"
+              ><i class="fa-solid fa-cart-shopping"></i><span>Đơn hàng</span></a
+            >
+          </li>
+          <li>
+            <a href="./user.html"
+              ><i class="fa-solid fa-users"></i><span>Người dùng</span></a
+            >
+          </li>
+          <li>
+            <a href="./news.html" class="active"
+              ><i class="fa-solid fa-file-lines"></i><span>Bài viết</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--right  -->
+    <div class="main-content">
+      <header>
+        <h2>
+          <label for="nav-toggle"><i class="fa-solid fa-bars"></i></label>
+        </h2>
+        <div class="search-wrapper">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" placeholder="Tìm kiếm" />
+        </div>
+        <div class="user-wrapper">
+          <img
+            src="./images/avt.png"
+            width="40px"
+            height="40px"
+            alt=""
+            srcset=""
+          />
+
+          <h4>Nhi Pham</h4>
+        </div>
+      </header>
+
+      <!-- MAIN -->
+      <main>
+        <div class="recent-gird">
+          <div class="projects">
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h2>Quản lí Bài viết</h2>
+                  <p style="padding: 12px 0">Hiển thị 4 trên 10 dòng</p>
+                </div>
+                <button
+                  class="trigger"
+                  style="margin: 12px 0; height: 3rem; width: 5rem"
+                >
+                  + Thêm
+                </button>
+              </div>
+              <!-- Modal -->
+              <div class="modal">
+                <div class="modal-content">
+                  <span class="close-button">&times;</span>
+                  <h2>Thêm bài viết mới</h2>
+                  <p>Hình ảnh</p>
+                  <img
+                    src="./images/photo.svg"
+                    alt=""
+                    style="width: 15%; height: 15%"
+                  />
+                  <p>Tiêu đề</p>
+                  <input type="text" />
+                  <p>Ngày tạo</p>
+                  <input type="date" />
+
+                  <p>Nội dung</p>
+                  <textarea
+                    name=""
+                    id=""
+                    style="width: 100%"
+                    cols="25"
+                    rows="6"
+                  ></textarea>
+
+                  <div
+                    style="
+                      display: flex;
+                      gap: 0.5rem;
+                      justify-content: end;
+                      margin-top: 0.5rem;
+                    "
+                  >
+                    <button>Thêm</button>
+                    <button>Hủy</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Lọc -->
+              <div
+                style="
+                  display: flex;
+
+                  display: inline-block;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <div class="dropup">
+                  <button class="dropbtn">
+                    Bộ lọc <i class="fa-solid fa-filter"></i>
+                  </button>
+                  <div class="dropup-content">
+                    <p>Ngày tạo</p>
+                    <input type="date" name="" id="" />
+                    <p>Lần chỉnh gần nhất</p>
+                    <input type="date" name="" id="" />
+                  </div>
+                </div>
+                <!-- Tìm kiếm -->
+                <div class="box">
+                  <input type="search" id="search" placeholder="Tìm kiếm..." />
+                  <button class="icon"><i class="fa fa-search"></i></button>
+                </div>
+              </div>
+              <div class="card-body">
+                <table>
+                  <thead>
+                    <tr>
+                      <td>Tiêu đề</td>
+                      <td>Ngày tạo</td>
+                      <td>Lần chỉnh sửa gần nhất</td>
+                      <td class="td">Tùy chỉnh</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        Nhâm nhi cà phê bao lâu nhưng bạn <br />tận mắt nhìn kỹ
+                        xem hạt cà phê chưa?
+                      </td>
+                      <td>21/12/2022</td>
+                      <td>20:35 12/01/2022</td>
+                      <td class="td">
+                        <i class="fa-solid fa-pen pen"></i>
+                        <i class="fa-solid fa-trash-can move"></i>
+                      </td>
+                    </tr>
+                    <!-- -------------------------------------- -->
+                    <tr>
+                      <td>
+                        Uống 1-4 tách cà phê mỗi ngày<br />
+                        giúp bệnh nhân ung thư kéo dài sự sống
+                      </td>
+                      <td>10/10/2022</td>
+                      <td>09:15 06/01/2022</td>
+                      <td class="td">
+                        <i class="fa-solid fa-pen pen"></i>
+                        <i class="fa-solid fa-trash-can move"></i>
+                      </td>
+                    </tr>
+                    <!-- -------------------------------------- -->
+                    <tr>
+                      <td>Uống trà có mất ngủ không?</td>
+                      <td>09/07/2022</td>
+                      <td>19:20 01/01/2022</td>
+                      <td class="td">
+                        <i class="fa-solid fa-pen pen"></i>
+                        <i class="fa-solid fa-trash-can move"></i>
+                      </td>
+                    </tr>
+                    <!-- -------------------------------------- -->
+                  </tbody>
+                </table>
+                <div class="add">
+                  <button><i class="fa-solid fa-chevron-left"></i></button>
+                  <button>1</button>
+                  <button>2</button>
+                  <button>...</button>
+                  <button><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script>
+    var xValues = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+
+    new Chart("myChart", {
+      type: "line",
+      data: {
+        labels: xValues,
+        datasets: [
+          {
+            data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 7830, 2478],
+            borderColor: "red",
+            fill: false,
+          },
+          {
+            data: [1600, 1700, 1700, 1900, 2000, 2700, 4000, 5000, 6000, 7000],
+            borderColor: "green",
+            fill: false,
+          },
+          {
+            data: [300, 700, 2000, 5000, 6000, 4000, 2000, 1000, 200, 100],
+            borderColor: "blue",
+            fill: false,
+          },
+        ],
+      },
+      options: {
+        legend: { display: false },
+      },
+    });
+  </script>
+  <script src="./script.js"></script>
+</html>
